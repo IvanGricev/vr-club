@@ -47,7 +47,7 @@ function App() {
 
         <main>
           <Routes>
-            <Route path="/" element={<HomePage />} /> {/* Используйте element вместо component для React Router v6 */}
+            <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/technologies" element={<TechnologiesPage />} />

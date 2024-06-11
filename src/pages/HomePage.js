@@ -138,6 +138,28 @@ const HomePage = () => {
                     </button>
                 </div>
             </div>
+            <div className='tecnologis-block container-fluid mt-6'>
+                <div class="row tecnologi-main-img justify-content-lg-center align-items-center">
+                    <div class="col text-center">
+                        <h2 className='fs-1'>TECHNOLOGIES & HARDWARE</h2>
+                        <p className='fs-2'>USED BY HYDRA VR.</p>
+                    </div>
+                </div>
+                <div className='row tecnologi-imgs justify-content-lg-center'>
+                    <div className='tecnologi col'>
+                        <img className="tecnologis-img" src="./img/unreal.png" alt="tecnologis-main" style={{width: '100%', height: '100%'}}/>
+                    </div>
+                    <div className='tecnologi col'>
+                        <img className="tecnologis-img" src="./img/unity.png" alt="tecnologis-main" style={{width: '100%', height: '100%'}}/>
+                    </div>
+                    <div className='tecnologi col'>
+                        <img className="tecnologis-img" src="./img/oculus.png" alt="tecnologis-main" style={{width: '100%', height: '100%'}}/>
+                    </div>
+                    <div className='tecnologi col'>
+                        <img className="tecnologis-img" src="./img/vive.png" alt="tecnologis-main" style={{width: '100%', height: '100%'}}/>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };
