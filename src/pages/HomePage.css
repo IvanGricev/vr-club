@@ -37,6 +37,13 @@
     background: radial-gradient(50% 2900.76% at 50% 53.89%, rgba(58, 52, 86, 0.95) 0%, #211E2E 100%);
 }
 
+.about-img{
+    width: 524px;
+    height: 557px;
+    border-radius: 240px 100px 240px 100px;
+
+}
+
 @media screen and (max-width: 600px) {
     .start-img-block{
         margin-top: 10%;
@@ -44,4 +51,9 @@
     .start-contacts-block{
         display: none !important;
     }
+
+    .hide {
+        display: none;
+    }
+
 }

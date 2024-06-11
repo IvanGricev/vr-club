@@ -45,6 +45,39 @@ const HomePage = () => {
                     </div>
                 </div>
             </div>
+            <div className='about-block row container-fluid mt-4 d-flex'>
+                <div className='col justify-content-lg-start'>
+                    <h2 className='fw-bold'>
+                        INTRODUCTION
+                    </h2>
+                    <h2 className='fw-light'>
+                        TO HYDRA VR
+                        <img className="about-img hide" src="./img/arrow.svg" alt="arrow" style={{width: '228px', height: '100px', paddingLeft:'10%'}}/>                
+                    </h2>
+                </div>
+                <div className='col justify-content-lg-end d-flex '>
+                    <p>Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat  nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris commodo  quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare lectus sit amet est placerat in. Lectus magna fringilla urna porttitor rhoncus vitae.</p>
+                </div>
+            </div>
+            <div className='about-block row container-fluid mt-4'>
+                <div className='col justify-content-lg-start'>
+                    <img className="about-img" src="./img/about-block.png" alt="howto"/>                
+                </div>
+                <div className='col justify-content-lg-end d-flex flex-column align-self-center'>
+                    <h2 className='fw-bold'>
+                        ABOUT
+                    </h2>
+                    <h2 className='fw-light'>
+                        HYDRA VR
+                    </h2>
+                    <p className='pt-4'>
+                    Eget mi proin sed libero enim sed faucibus turpis. Nisl rhoncus mattis rhoncus urna neque viverra justo. Vivamus at augue eget arcu dictum. Ultrices gravida dictum fusce ut placerat orci. Aenean et tortor at risus viverra adipiscing at in. Mattis aliquam faucibus purus in massa. Est placerat in egestas erat imperdiet sed. Consequat semper viverra nam libero justo laoreet sit amet. Aliquam etiam erat velit scelerisque in dictum non consectetur a. Laoreet sit amet cursus sit amet. Vel eros donec ac odio tempor orci dapibus. Sem nulla pha retra diam sit amet nisl suscipit adipiscing bibendum. Leo a diam sollicitudi n tempor.
+                    </p>
+                    <button className="filled-button mt-4 w-50" onClick={() => window.location.href='/how-to'}>
+                        LET’S GET IN TOUCH
+                    </button>
+                </div>
+            </div>
         </div>
     );
 };
