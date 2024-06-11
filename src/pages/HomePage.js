@@ -45,9 +45,9 @@ const HomePage = () => {
                     </div>
                 </div>
             </div>
-            <div className='about-block row container-fluid mt-4 d-flex'>
+            <div className='about-block row container-fluid mt-6 d-flex'>
                 <div className='col justify-content-lg-start'>
-                    <h2 className='fw-bold'>
+                    <h2 className='fw-bold fs-1'>
                         INTRODUCTION
                     </h2>
                     <h2 className='fw-light'>
@@ -59,7 +59,7 @@ const HomePage = () => {
                     <p>Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat  nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris commodo  quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare lectus sit amet est placerat in. Lectus magna fringilla urna porttitor rhoncus vitae.</p>
                 </div>
             </div>
-            <div className='about-block row container-fluid mt-4'>
+            <div className='about-block row container-fluid mt-6'>
                 <div className='col justify-content-lg-start'>
                     <img className="about-img" src="./img/about-block.png" alt="howto"/>                
                 </div>
@@ -75,6 +75,66 @@ const HomePage = () => {
                     </p>
                     <button className="filled-button mt-4 w-50" onClick={() => window.location.href='/how-to'}>
                         LET’S GET IN TOUCH
+                    </button>
+                </div>
+            </div>
+            <div className='about-block row container-fluid mt-6 d-flex'>
+                <div className='col justify-content-lg-start'>
+                    <h2 className='fw-bold fs-1'>
+                        WHY BUILD
+                    </h2>
+                    <h2 className='fw-light fs-2'>
+                        WITH HYDRA?
+                        <img className="about-img hide" src="./img/arrow.svg" alt="arrow" style={{width: '228px', height: '100px', paddingLeft:'10%'}}/>                
+                    </h2>
+                </div>
+                <div className='col justify-content-lg-end d-flex '>
+                    <p>Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat  nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris commodo  quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare lectus sit amet est placerat in. Lectus magna fringilla urna porttitor rhoncus vitae.</p>
+                </div>
+            </div>
+            <div className='cards-block row container-fluid mt-6'>
+                <div className='card col text-light d-flex'>
+                    <div className='align-self-center mt-3'>
+                        <img className="card-img" src="./img/card1.png" alt="card1" style={{width: '228px', height: '100px'}}/>
+                    </div>
+                    <h2 className='mt-3 align-self-center'>SIMULATION</h2>
+                    <hr className='w-75 align-self-center'/>
+                    <p>Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet  porttitor rhoncus libero justo laoreet sit amet vitae.</p>
+                    <button className="filled-button mt-3" onClick={() => window.location.href='/services'}>
+                        TRY IT NOW
+                    </button>
+                </div>
+                <div className='card col text-light'>
+                    <div className='align-self-center mt-3'>
+                        <img className="card-img" src="./img/card2.png" alt="card1" style={{width: '228px', height: '100px'}}/>
+                    </div>
+                    <h2 className='mt-3 align-self-center'>EDUCATION</h2>
+                    <hr className='w-75 align-self-center'/>
+                    <p>Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet  porttitor rhoncus libero justo laoreet sit amet vitae.</p>
+                    <button className="filled-button mt-3" onClick={() => window.location.href='/services'}>
+                        TRY IT NOW
+                    </button>
+                </div>
+                <div className='card col text-light'>
+                    <div className='align-self-center mt-3'>
+                        <img className="card-img" src="./img/card3.png" alt="card1" style={{width: '228px', height: '100px'}}/>
+                    </div>                    
+                    <h2 className='mt-3 align-self-center'>SELF-CARE</h2>
+                    <hr className='w-75 align-self-center'/>
+                    <p>Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet  porttitor rhoncus libero justo laoreet sit amet vitae.</p>
+                    <button className="filled-button mt-3" onClick={() => window.location.href='/services'}>
+                        TRY IT NOW
+                    </button>
+                </div>
+                <div className='card col text-light'>
+                    <div className='align-self-center mt-3'>
+                        <img className="card-img" src="./img/card4.png" alt="card1" style={{width: '228px', height: '100px'}}/>
+                    </div>                    
+                    <h2 className='mt-3 align-self-center'>OUTDOOR</h2>
+                    <hr className='w-75 align-self-center'/>
+                    <p>Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet  porttitor rhoncus libero justo laoreet sit amet vitae.</p>
+                    <button className="filled-button mt-3" onClick={() => window.location.href='/services'}>
+                        TRY IT NOW
                     </button>
                 </div>
             </div>

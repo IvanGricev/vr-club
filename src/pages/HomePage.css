@@ -28,6 +28,9 @@
     border-radius: 100px 100px 100px 240px;
 }
 
+.mt-6{
+    padding-top: 10%;
+}
 
 .start-contacts-block{
     width: 1272px;
@@ -42,6 +45,26 @@
     height: 557px;
     border-radius: 240px 100px 240px 100px;
 
+}
+
+.cards-block{
+    gap: 2%;
+}
+
+.card{
+    background: radial-gradient(50% 50% at 50% 50%, #433D60 0%, #211E2E 100%);
+    width: 310px;
+    height: 520px !important;
+    border-radius: 40px !important;
+}
+
+.card-img{
+    border: 22px;
+    border-style: solid;
+    border-color: rgba(14, 14, 14, 0.32);
+    border-radius: 100% !important;
+    width: 219px !important;
+    height: 219px !important;
 }
 
 @media screen and (max-width: 600px) {
