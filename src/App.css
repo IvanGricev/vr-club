@@ -46,11 +46,7 @@ footer hr{
   border-style: solid;
 }
 
-@media screen and (max-width: 600px) {
-  .d-flex {
-      flex-direction: column;
-  }
-
+@media screen and (max-width: 800px) {
   .navbar-collapse{
     padding-top: 10px;
   }
@@ -60,6 +56,12 @@ footer hr{
   }
   .nav-buttons .filled-button{
     margin-left: 26%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .d-flex {
+      flex-direction: column;
   }
 
   footer{
