@@ -17,11 +17,30 @@ const HomePage = () => {
         setFormData({...formData, [e.target.name]: e.target.value });
     };
     
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(formData);
-        // накинуть логики
+    
+        const formData = new FormData(e.target);
+        const data = Object.fromEntries(formData);
+    
+        try {
+            const response = await fetch('http://localhost:3000/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+    
+            if (!response.ok) throw new Error('Failed to send email');
+    
+            alert('Email sent successfully!');
+        } catch (error) {
+            console.error('Error:', error);
+            alert('An error occurred. Please try again.');
+        }
     };
+    
     
     return (
         <div className="home-page text-light container">
@@ -160,8 +179,8 @@ const HomePage = () => {
                 </div>
             </div>
             <div className='tecnologis-block container-fluid mt-6 hide-tec'>
-                <div class="row tecnologi-main-img justify-content-lg-center align-items-center">
-                    <div class="col text-center">
+                <div className="row tecnologi-main-img justify-content-lg-center align-items-center">
+                    <div className="col text-center">
                         <h2 className='fs-1'>TECHNOLOGIES & HARDWARE</h2>
                         <p className='fs-2'>USED BY HYDRA VR.</p>
                     </div>
