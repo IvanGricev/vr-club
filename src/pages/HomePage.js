@@ -1,46 +1,23 @@
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap'; 
 import './HomePage.css';
+import emailjs from 'emailjs-com';
 
 
 const HomePage = () => {
-    const [formData, setFormData] = useState({
-        name: '',
-        surname: '',
-        email: '',
-        phone: '',
-        theme: '',
-        message: ''
-    });
     
-    const handleChange = (e) => {
-        setFormData({...formData, [e.target.name]: e.target.value });
-    };
-    
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-    
-        const formData = new FormData(e.target);
-        const data = Object.fromEntries(formData);
-    
-        try {
-            const response = await fetch('http://localhost:3000/send-email', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            });
-    
-            if (!response.ok) throw new Error('Failed to send email');
-    
-            alert('Email sent successfully!');
-        } catch (error) {
-            console.error('Error:', error);
-            alert('An error occurred. Please try again.');
-        }
-    };
-    
+    function sendEmail(e) {
+        e.preventDefault();    
+
+        emailjs.sendForm('service_t9hwyzl', 'template_b74451j', e.target, 'O_NWvZf-TdjQoc_Cm')
+            .then((result) => {
+                window.location.reload()
+            }, (error) => {
+                console.log(error.text);
+                alert('Произошла ошибка. Пожалуйста, попробуйте снова.');
+            }
+        );
+    }
     
     return (
         <div className="home-page text-light container">
@@ -260,46 +237,46 @@ const HomePage = () => {
                         <p>Let’s Build Your VR Experience</p>
                     </div>
                 </div>
-                <Form onSubmit={handleSubmit} className='From'>
+                <Form onSubmit={sendEmail} className='From'>
                     <div className="row mb-3">
                         <div className="col-md-6">
                         <Form.Group controlId="nameInput">
-                            <Form.Control className='input' type="text" name="name" placeholder="First Name" onChange={handleChange} />
+                            <Form.Control className='input' type="text" name="from_name" placeholder="First Name" />
                         </Form.Group>
                         </div>
                         <div className="col-md-6">
                         <Form.Group controlId="surnameInput">
-                            <Form.Control className='input' type="text" name="surname" placeholder="Last Name" onChange={handleChange} />
+                            <Form.Control className='input' type="text" name="from_surename" placeholder="Last Name" />
                         </Form.Group>
                         </div>
                     </div>
                     <div className="row mb-3">
                         <div className="col-md-6">
                         <Form.Group controlId="emailInput">
-                            <Form.Control className='input' type="email" name="email" placeholder="Email" onChange={handleChange} />
+                            <Form.Control className='input' type="email" name="from_email" placeholder="Email" />
                         </Form.Group>
                         </div>
                         <div className="col-md-6">
                         <Form.Group controlId="phoneInput">
-                            <Form.Control className='input' type="tel" name="phone" placeholder="Phone Number" onChange={handleChange} />
+                            <Form.Control className='input' type="tel" name="phone" placeholder="Phone Number" />
                         </Form.Group>
                         </div>
                     </div>
                     <div className="row mb-3">
                         <div className="col-md-12">
                         <Form.Group controlId="themeInput">
-                            <Form.Control className='input' type="text" name="theme" placeholder="Subject" onChange={handleChange} />
+                            <Form.Control className='input' type="text" name="subject" placeholder="Subject" />
                         </Form.Group>
                         </div>
                     </div>
                     <div className="row mb-3">
                         <div className="col-md-12">
                         <Form.Group controlId="messageInput">
-                            <Form.Control className='input' as="textarea" name="message" rows={3} placeholder="Tell Us Something..." onChange={handleChange} />
+                            <Form.Control className='input' as="textarea" name="html_message" rows={3} placeholder="Tell Us Something..." />
                         </Form.Group>
                         </div>
                     </div>
-                    <Button type="submit" className='filled-button button-submit text-black'>
+                    <Button type="submit" value="Send" className='filled-button button-submit text-black'>
                         SEND TO HYDRA
                     </Button>
                 </Form>

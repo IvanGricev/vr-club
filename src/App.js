@@ -6,7 +6,6 @@ import ServicesPage from './pages/ServicesPage';
 import TechnologiesPage from './pages/TechnologiesPage';
 import HowToPage from './pages/HowToPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 function App() {
   return (
     <Router>
